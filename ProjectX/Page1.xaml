@@ -1,0 +1,50 @@
+﻿<Page x:Class="ProjectX.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:ProjectX"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+    <Page.Resources>
+        <Style x:Key="BlackAndWhite">
+            <Setter Property="Control.FontFamily" Value="Georgia" />
+            <Setter Property="Control.Background" >
+                <Setter.Value>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFF04B4B" Offset="0"/>
+                        <GradientStop Color="#FFEC9898" Offset="1"/>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Control.Foreground" Value="#FF391E74" />
+            <Setter Property="Control.Margin" Value="10" />
+           
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Frame x:Name="Main"/>
+            <Image x:Name="qwe" Source="Source/Фон.png" HorizontalAlignment="Center" VerticalAlignment="Center" Stretch="Uniform" Width="820"/>
+        </Grid>
+        <Grid Grid.Row="1" >
+            <TextBlock Text="Добро пожаловать в программу!" Margin="0,0,0,0" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center"></TextBlock>
+            <Label FontSize="40" Margin="0,60,0,-10" HorizontalAlignment="Center" >Для начала работы нажимте кнопку Старт
+            </Label>
+            <Button Width="120" Height="60" HorizontalAlignment="Center" Content="Старт" FontSize="17" Click="Button_Click_2" Margin="362,156,358,29" Style="{StaticResource BlackAndWhite}" VerticalAlignment="Center" >
+
+            </Button>
+            <!--<TextBox x:Name="ff" Width="150" Height="40" HorizontalAlignment="Left" FontSize="20" TextChanged="TextBox_TextChanged"></TextBox>-->
+        </Grid>
+
+        <Grid Grid.Row="2">
+
+        </Grid>
+    </Grid>
+</Page>
